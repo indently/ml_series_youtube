@@ -43,7 +43,7 @@ def wine_decision(wine_type, score, price):
     print('Score (FOREST): ', rf_clf.score(X, y))
 
     # We make and format the prediction
-    prediction = clf.predict([[transl[wine_type], transl[score], transl[price]]])
+    prediction = rf_clf.predict([[transl[wine_type], transl[score], transl[price]]])
     value = int(prediction[0])
     print(value)
     print('I buy the wine.' if value == 1 else 'No wine for me today.')
